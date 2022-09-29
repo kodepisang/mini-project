@@ -1,4 +1,4 @@
-@extends('layouts.app-backend', ['title' => 'Home'])
+@extends('layouts.app-backend', ['title' => 'items'])
 
 @section('content')
     <div class="container">
@@ -8,13 +8,7 @@
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        {{ __('You are logged in!') }}
+                        <h1>Hello items</h1>
                     </div>
                 </div>
             </div>

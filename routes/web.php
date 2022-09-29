@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ManagementUserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('welcome-ui');
 });
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/users/view', [ManagementUserController::class, 'index'])->name('userManagment');
+// Route::get('/items/view', [ItemController::class, 'index'])->name('item');
+

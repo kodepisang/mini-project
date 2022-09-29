@@ -6,3 +6,8 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+//custom
+// npm install bootstrap@latest bootstrap-icons @popperjs/core --save-dev
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@import 'mystyle.scss';
