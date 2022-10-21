@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\ManagementUserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/users/view', [ManagementUserController::class, 'index'])->name('userManagment');
-// Route::get('/items/view', [ItemController::class, 'index'])->name('item');
+Route::get('/barang/view', [ItemsController::class, 'index'])->name('barang');
 
+// Route::get('/items/view', [ItemController::class, 'index'])->name('item');
