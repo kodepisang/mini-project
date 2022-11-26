@@ -24,8 +24,14 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/users/view', [ManagementUserController::class, 'index'])->name('userManagment');
+Route::get('/users/addFrom', [ManagementUserController::class, 'create'])->name('userManagmentCreate');
+Route::post('/users/post', [ManagementUserController::class, 'store'])->name('userManagmentStore');
+Route::get('/users/{user}/edit', [ManagementUserController::class, 'edit'])->name('userManagmentEdit');
+Route::delete('/users/{user}/delete', [ManagementUserController::class, 'destroy'])->name('userManagmentDelete');
+Route::post('/users/{user}/update', [ManagementUserController::class, 'update'])->name('userManagmentUpdate');
+
+
 Route::get('/barang/view', [ItemsController::class, 'index'])->name('barang');
 
 // Route::get('/items/view', [ItemController::class, 'index'])->name('item');

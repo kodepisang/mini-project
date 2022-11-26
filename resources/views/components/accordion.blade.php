@@ -66,8 +66,8 @@
                     <a href="{{ route('userManagment') }}" class="list-group-item list-group-item-action border-0"><i
                             class="bi bi-chevron-right"></i>
                         Data Users</a>
-                    <a href="{{ url('/') }}" class="list-group-item list-group-item-action border-0"><i
-                            class="bi bi-chevron-right"></i>
+                    <a href="{{ route('userManagmentCreate') }}"
+                        class="list-group-item list-group-item-action border-0"><i class="bi bi-chevron-right"></i>
                         Tambah data
                     </a>
                 </div>
